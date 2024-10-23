@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ</title>
+    <link rel="stylesheet" href="shop quần áo.css">
+    <style>
+        h3 {
+            padding:0;
+            font-size: 3.5rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 150rem;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            width: 33rem;
+            height: 25rem;
+        }
+
+        .product img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+
+        .product:nth-child(5) {
+            visibility: hidden;
+            transform: translate(-8rem, 0rem);
+            height: 32rem;
+            width: 43rem;
+            margin: auto;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-height: 20rem;
+        }
+
+        .product-details {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #gio-hang {
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 15rem;
+            height: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="ava.jpg" style="height: 25rem; width:auto" alt="Avatar">
+            <img src="poster.jpg" style="height: 25rem; width: 80rem" alt="Poster Image">
+        </div>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="shop quần áo.html">Trang chủ</a>
+            <a href="#sanpham">Sản phẩm</a>
+            <a id="đăng_nhập">Đăng Nhập</a>
+            <a id="đăng_ký">Đăng ký</a>
+            <a href="#gallery">Giỏ hàng</a>
+            <a href="#contact">Liên hệ</a>
+            <a id="search-btn">Tìm Kiếm</a>
+        </nav>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <div class="product-grid">
+        <div class="product" onclick="showProductDetail(1)">
+            <img src="(chụp ảnh) cổ điển.jpg" alt="cổ điển">
+        </div>
+        <div class="product" onclick="showProductDetail(2)">
+            <img src="(chụp ảnh) hiện đại" alt="hiện đại">
+        </div>
+        <div class="product" onclick="showProductDetail(3)">
+            <img src="(chụp ảnh) chân dung.jpg" alt="chân dung">
+        </div>
+        <div class="product" onclick="showProductDetail(4)">
+            <img src="(chụp ảnh) dạ hội" alt="dạ hội">
+        </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="" alt="Hình ảnh sản phẩm">
+            </div>
+                <h3 id="product-title"></h3>
+            <div class="product-details">
+                <p id="product-description"></p>
+                <button id="gio-hang">Thêm vào giỏ hàng</button>
+            </div>
+        </div>   
+        <div class="product" onclick="showProductDetail(5)">
+            <img src="(chụp ảnh) thanh xuân.jpg" alt="thanh xuân">
+        </div>
+        <div class="product" onclick="showProductDetail(6)">
+            <img src="(chụp ảnh) gia đình.jpg" alt="gia đình">
+        </div>
+        <div class="product" onclick="showProductDetail(7)">
+            <img src="(chụp ảnh) sinh nhật" alt="sinh nhật">
+        </div>
+        <div class="product" onclick="showProductDetail(8)">
+            <img src="(chụp ảnh) cổ trang.jpg" alt="cổ trang">
+        </div>
+    </div>  
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Giới Thiệu</h3>
+                <p>Chào mừng bạn đến với Shop Thời Trang An Phúc! Chúng tôi tự hào là địa điểm tuyệt vời để bạn tìm kiếm những bộ quần áo thời trang đa dạng từ những thương hiệu nổi tiếng đến phong cách độc đáo.</p>
+            </div>
+            <div class="box">
+                <h3>Liên hệ</h3>
+                <a href="https://www.facebook.com/profile.php?id=100092732870843">Facebook: Thời trang nam, nữ An Phúc</a>
+                <a> SDT: 0853 920 658 / 0913 019 568</a>
+                <a href="https://www.google.com/maps/search/121+Ngh%C4%A1a+D%C5%A5ng,+Ph%C3%BAc+X%C3%A1,+Ba+%C4%90%C3%ACnh,+H%C3%A0+N%E1%BB%99i/@21.0472046,105.8440941,17z/data=!3m1!4b1?hl=vi-VN&entry=ttu"> Địa chỉ: 121 Nghĩa Dũng, Phúc Xá, Ba Đình, Hanoi, Vietnam </a>
+            </div>
+
+        </div>
+
+        <h1 class="credit">Được tạo bởi <span>Phong Dinh Ta</span> | Tất cả đã sẵn sàng phục vụ quý khách</h1>
+
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('.product:nth-child(5)').style.visibility = 'hidden';
+        });
+        function showProductDetail(productId) {
+
+            document.querySelector('.product:nth-child(5)').style.visibility = 'visible';
+            
+            const productTitle = document.getElementById('product-title');
+            const productDescription = document.getElementById('product-description');
+            const productImage = document.querySelector('.product-image img');
+            
+            switch (productId) {
+                case 1:
+                    productTitle.textContent = "Concept Cổ Điển";
+                    productDescription.textContent = "Giá: 1.000.000 VNĐ";
+                    productImage.src = "(chụp ảnh) cổ điển.jpg";
+                    break;
+                case 2:
+                    productTitle.textContent = "Concept Hiện Đại";
+                    productDescription.textContent = "Giá: 1.500.000 VNĐ";
+                    productImage.src = "(chụp ảnh) hiện đại";
+                    break;
+                case 3:
+                    productTitle.textContent = "Concept Chân Dung";
+                    productDescription.textContent = "Giá: 800.000 VNĐ";
+                    productImage.src = "(chụp ảnh) chân dung.jpg";
+                    break;
+                case 4:
+                    productTitle.textContent = "Concept Dạ Hội";
+                    productDescription.textContent = "Giá: 2.000.000 VNĐ";
+                    productImage.src = "(chụp ảnh) dạ hội";
+                    break;
+                case 5:
+                    productTitle.textContent = "Concept Thanh Xuân";
+                    productDescription.textContent = "Giá: 1.800.000 VNĐ";
+                    productImage.src = "(chụp ảnh) thanh xuân.jpg";
+                    break;
+                case 6:
+                    productTitle.textContent = "Concept Gia Đình";
+                    productDescription.textContent = "Giá: 1.200.000 VNĐ ";
+                    productImage.src = "(chụp ảnh) gia đình.jpg";
+                    break;
+                case 7:
+                    productTitle.textContent = "Concept Sinh Nhật";
+                    productDescription.textContent = "Giá: 900.000 VNĐ";
+                    productImage.src = "(chụp ảnh) sinh nhật";
+                    break;
+                case 8:
+                    productTitle.textContent = "Concept Cổ Trang";
+                    productDescription.textContent = "Giá: 2.500.000 VNĐ";
+                    productImage.src = "(chụp ảnh) cổ trang.jpg";
+                    break;
+
+            }
+            document.getElementById('product-detail').style.display = 'flex';
+        }
+
+    </script>
+</body>
+</html>

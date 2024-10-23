@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ</title>
+    <link rel="stylesheet" href="shop quần áo.css">
+    <style>
+        h3{
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+        .product-grid {
+            margin-left: 10rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .product img {
+            max-width: 100%;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-box {
+            background-color: #fff;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        .product-image img{
+            flex: 1;
+            width: 30rem; 
+            height: auto; 
+        }
+
+        .product-details {
+            flex: 1;
+            padding: 20px;
+        }
+        .overlay button{
+            font-size: 1.5rem;
+            padding: 1rem;
+            margin-left: 7rem;
+            margin-top: 7rem;
+            background-color: aquamarine;
+        }
+        
+        #gio-hang{
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            margin-top: 4rem;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <div class="logo">
+            <img src="ava.jpg" style="height: 25rem; width:auto" alt="Avatar">
+            <img src="poster.jpg" style="height: 25rem; width: 80rem" alt="Poster Image">
+        </div>
+        
+        <div id="menu-bar" class="fas fa-bars"></div>
+                    
+        <nav class="navbar">
+            <a href="shop quần áo.html">Trang chủ</a>
+            <a href="#sanpham">Sản phẩm</a>
+            <a id="đăng_nhập">Đăng Nhập</a>
+            <a id="đăng_ký">Đăng ký</a>
+            <a href="#gallery">Giỏ hàng</a>
+            <a href="#contact">Liên hệ</a>
+            <a id="search-btn">Tìm Kiếm</a>
+        </nav>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <div class="product-grid">
+        <div class="product" onclick="showProductDetail(1)">
+            <img src="(thuê đồ) áo dài.jpg" alt="áo dài">
+            <h3>Áo Dài</h3>
+            <p>Giá: 500.000 VNĐ/ngày</p>
+        </div>
+        <div class="product" onclick="showProductDetail(2)">
+            <img src="(thuê đồ) cổ phục.jpg" alt="cổ phục">
+            <h3>Cổ Phục</h3>
+            <p>Giá: 400.000 VNĐ/ngày</p>
+        </div>
+        <div class="product" onclick="showProductDetail(3)">
+            <img src="(thuê đồ) váy dạ hội.jpg" alt="váy dạ hội">
+            <h3>Váy Dạ Hội</h3>
+            <p>Giá: 800.000 VNĐ/ngày</p>
+        </div>
+        <div class="product" onclick="showProductDetail(4)">
+            <img src="(thuê đồ) vest.jpg" alt="vest">
+            <h3>Vest</h3>
+            <p>Giá: 1.000.000 VNĐ/ngày</p>
+        </div>
+        <div class="product" onclick="showProductDetail(5)">
+            <img src="(thuê đồ) hanbok.jpg" alt="hanbok">
+            <h3>Hanbok</h3>
+            <p>Giá: 1.500.000 VNĐ/ngày</p>
+        </div>
+        <div class="product" onclick="showProductDetail(6)">
+            <img src="(thuê đồ) đồ cosplay.jpg" alt="đồ cosplay">
+            <h3>Đồ Cosplay</h3>
+            <p>Giá: 1.200.000 VNĐ/ngày</p>
+        </div>
+    </div>
+    
+    <div class="overlay" id="product-detail">
+        <div class="product-box">
+            <div class="product-image">
+                <img src="" alt="Hình ảnh sản phẩm">
+            </div>
+            <div class="product-details">
+                <h3 id="product-title"></h3>
+                <p id="product-description"></p>
+                <button id = "gio-hang"> Thêm vào giỏ hàng</button>
+                <button onclick="hideProductDetail()">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Giới Thiệu</h3>
+                <p>Chào mừng bạn đến với Shop Thời Trang An Phúc! Chúng tôi tự hào là địa điểm tuyệt vời để bạn tìm kiếm những bộ quần áo thời trang đa dạng từ những thương hiệu nổi tiếng đến phong cách độc đáo.</p>
+            </div>
+            <div class="box">
+                <h3>Liên hệ</h3>
+                <a href="https://www.facebook.com/profile.php?id=100092732870843">Facebook: Thời trang nam, nữ An Phúc</a>
+                <a> SDT: 0853 920 658 / 0913 019 568</a>
+                <a href="https://www.google.com/maps/search/121+Ngh%C4%A9a+D%C5%A9ng,+Ph%C3%BAc+X%C3%A1,+Ba+%C4%90%C3%ACnh,+H%C3%A0+N%E1%BB%99i/@21.0472046,105.8440941,17z/data=!3m1!4b1?hl=vi-VN&entry=ttu"> Địa chỉ: 121 Nghĩa Dũng, Phúc Xá, Ba Đình, Hanoi, Vietnam </a>
+            </div>
+
+        </div>
+
+        <h1 class="credit"> Được tạo bởi <span> Phong Dinh Ta </span> | Tất cả đã sẵn sàng phục vụ quý khách </h1>
+
+    </section>
+    
+    <script>
+        function showProductDetail(productId) {
+            const overlay = document.getElementById('product-detail');
+            const productImage = overlay.querySelector('.product-image');
+            const productDetails = overlay.querySelector('.product-details');
+            const productTitle = document.getElementById('product-title');
+            const productDescription = document.getElementById('product-description');
+
+            switch (productId) {
+                case 1:
+                    productTitle.textContent = "Áo Dài";
+                    productDescription.textContent = "Áo dài, với thiết kế đầy tinh tế, sẽ tôn lên vẻ đẹp và phong cách của bạn. Dịch vụ thuê đồ áo dài giúp bạn tiết kiệm thời gian và tiền bạc, đồng thời đảm bảo rằng bạn luôn trông lộng lẫy và duyên dáng trong mọi tình huống.";
+                    productImage.querySelector('img').src = "(thuê đồ) áo dài.jpg";
+                    break;
+                case 2:
+                    productTitle.textContent = "Cổ Phục";
+                    productDescription.textContent = "Dịch vụ thuê đồ cổ phục là cách tuyệt vời để bạn khám phá và tận hưởng vẻ đẹp của trang phục truyền thống trong một trải nghiệm cá nhân hoặc cùng với bạn bè và gia đình. Bộ đồ thường được sử dụng trong các sự kiện đặc biệt như du lịch, chụp ảnh cưới, kỷ niệm, lễ hội hoặc các buổi tiệc cổ điển. ";
+                    productImage.querySelector('img').src = "(thuê đồ) cổ phục.jpg";
+                    break;
+                case 3:
+                    productTitle.textContent = "Váy Dạ Hội";
+                    productDescription.textContent = "Dịch vụ thuê đồ váy dạ hội là cách tuyệt vời để bạn tỏa sáng trong các sự kiện quan trọng như tiệc tùng, lễ hội, buổi tối tân gia, hoặc ngày kỷ niệm. Thay vì mua một bộ váy mới mỗi lần bạn cần tham dự một sự kiện đặc biệt, bạn có thể thuê các thiết kế váy dạ hội đẹp và sang trọng. ";
+                    productImage.querySelector('img').src = "(thuê đồ) váy dạ hội.jpg";
+                    break;
+                case 4:
+                    productTitle.textContent = "Vest";
+                    productDescription.textContent = "Dịch vụ thuê đồ vest là sự tiện lợi cho những người cần trang phục lịch lãm và phong cách, đặc biệt trong các dịp quan trọng như hôn lễ, buổi tiệc, hoặc sự kiện công việc. Thay vì phải đầu tư một khoản tiền lớn để sở hữu một bộ vest mới, bạn có thể dễ dàng tìm kiếm và thuê một bộ vest phù hợp với sở thích và kích cỡ của mình. ";
+                    productImage.querySelector('img').src = "(thuê đồ) vest.jpg";
+                    break;
+                case 5:
+                    productTitle.textContent = "Hanbok";
+                    productDescription.textContent = "Dịch vụ thuê đồ Hanbok là cơ hội để trải nghiệm vẻ đẹp truyền thống của Hàn Quốc. Cửa hàng chúng tôi cung cấp nhiều lựa chọn về kiểu dáng, màu sắc và phong cách của Hanbok, phù hợp với mọi độ tuổi và sở thích. Đây là một trải nghiệm thú vị để khám phá và thể hiện vẻ đẹp truyền thống trong một nền văn hóa phong cách.";
+                    productImage.querySelector('img').src = "(thuê đồ) hanbok.jpg";
+                    break;
+                case 6:
+                    productTitle.textContent = "Đồ Cosplay";
+                    productDescription.textContent = "Dịch vụ thuê đồ Cosplay là cơ hội tuyệt vời cho những người yêu thích văn hóa và thế giới ảo. Thông qua đó, bạn có thể chọn lựa và thuê các bộ trang phục hoặc phụ kiện của các nhân vật nổi tiếng. Bạn có thể tạo ra những bức ảnh và kỷ niệm đáng nhớ, cùng với cộng đồng Cosplay trên toàn thế giới. ";
+                    productImage.querySelector('img').src = "(thuê đồ) đồ cosplay.jpg";
+                    break;
+                    
+            }
+            overlay.style.display = 'flex';
+        }
+
+    function hideProductDetail() {
+        const overlay = document.getElementById('product-detail');
+        overlay.style.display = 'none';
+    }
+
+    </script>
+</body>
+</html>

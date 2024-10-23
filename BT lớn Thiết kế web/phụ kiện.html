@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ</title>
+    <link rel="stylesheet" href="shop quần áo.css">
+    <style>
+        h3{
+            font-size: 4rem;
+        }
+
+        p {
+            text-transform: none;
+            font-size: 2rem;
+        }
+        .product-grid {
+            margin-left: 10rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-box {
+            background-color: #fff;
+            width: 60rem;
+            height: 50rem;
+            flex-direction: row;   
+        }
+
+        .overlay button{
+            font-size: 1.5rem;
+            padding: 1rem;
+            margin-left: 11rem;
+            margin-top: 4rem;
+            background-color: aquamarine;
+        }
+        
+        #gio-hang{
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            margin-top: 4rem;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .product-video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .product-video-container video{
+            width: 40rem;
+            height: 30rem;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <div class="logo">
+            <img src="ava.jpg" style="height: 25rem; width:auto" alt="Avatar">
+            <img src="poster.jpg" style="height: 25rem; width: 80rem" alt="Poster Image">
+        </div>
+        
+        <div id="menu-bar" class="fas fa-bars"></div>
+                    
+        <nav class="navbar">
+            <a href="shop quần áo.html">Trang chủ</a>
+            <a href="#sanpham">Sản phẩm</a>
+            <a id="đăng_nhập">Đăng Nhập</a>
+            <a id="đăng_ký">Đăng ký</a>
+            <a href="#gallery">Giỏ hàng</a>
+            <a href="#contact">Liên hệ</a>
+            <a id="search-btn">Tìm Kiếm</a>
+        </nav>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <div class="product-grid">
+        <div class="product" onclick="showProductDetail(1)">
+            <img src="(phụ kiện) đồng hồ.jpg" alt="đồng hồ">
+            <h3>Đồng Hồ</h3>
+            <p>Giá: 250.000 VNĐ</p>
+        </div>
+        <div class="product" onclick="showProductDetail(2)">
+            <img src="(phụ kiện) thắt lưng.jpg" alt="thắt lưng">
+            <h3>Thắt Lưng</h3>
+            <p>Giá: 100.000 VNĐ</p>
+        </div>
+        <div class="product" onclick="showProductDetail(3)">
+            <img src="(phụ kiện) dây chuyền.jpg" alt="dây chuyền">
+            <h3>Dây Chuyền</h3>
+            <p>Giá: 50.000 VNĐ</p>
+        </div>
+        <div class="product" onclick="showProductDetail(4)">
+            <img src="(phụ kiện) nhẫn.jpg" alt="nhẫn">
+            <h3>Nhẫn</h3>
+            <p>Giá: 10.000 VNĐ</p>
+        </div>
+        <div class="product" onclick="showProductDetail(5)">
+            <img src="(phụ kiện) kính.jpg" alt="kính">
+            <h3>Kính</h3>
+            <p>Giá: 300.000 VNĐ/ngày</p>
+        </div>
+        <div class="product" onclick="showProductDetail(6)">
+            <img src="(phụ kiện) túi.jpg" alt="túi">
+            <h3>Túi</h3>
+            <p>Giá: 400.000 VNĐ</p>
+        </div>
+    </div>
+    
+    <div class="overlay" id="product-detail">
+        <div class="product-box">
+            <h3 id="product-title"></h3>
+            <div class="product-video-container"> 
+                <video controls autoplay id="product-video" src=""></video>
+            </div>
+            <p id="product-description"></p>
+            <button id = "gio-hang"> Thêm vào giỏ hàng</button>
+            <button onclick="hideProductDetail()">Đóng</button>
+        </div>
+    </div>
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Giới Thiệu</h3>
+                <p>Chào mừng bạn đến với Shop Thời Trang An Phúc! Chúng tôi tự hào là địa điểm tuyệt vời để bạn tìm kiếm những bộ quần áo thời trang đa dạng từ những thương hiệu nổi tiếng đến phong cách độc đáo.</p>
+            </div>
+            <div class="box">
+                <h3>Liên hệ</h3>
+                <a href="https://www.facebook.com/profile.php?id=100092732870843">Facebook: Thời trang nam, nữ An Phúc</a>
+                <a> SDT: 0853 920 658 / 0913 019 568</a>
+                <a href="https://www.google.com/maps/search/121+Ngh%C4%A9a+D%C5%A9ng,+Ph%C3%BAc+X%C3%A1,+Ba+%C4%90%C3%ACnh,+H%C3%A0+N%E1%BB%99i/@21.0472046,105.8440941,17z/data=!3m1!4b1?hl=vi-VN&entry=ttu"> Địa chỉ: 121 Nghĩa Dũng, Phúc Xá, Ba Đình, Hanoi, Vietnam </a>
+            </div>
+
+        </div>
+
+        <h1 class="credit"> Được tạo bởi <span> Phong Dinh Ta </span> | Tất cả đã sẵn sàng phục vụ quý khách </h1>
+
+    </section>
+    
+    <script>
+        function showProductDetail(productId) {
+            const overlay = document.getElementById('product-detail');
+            const productVideo = overlay.querySelector('#product-video');
+            const productDetails = overlay.querySelector('.product-details');
+            const productTitle = document.getElementById('product-title');
+
+            switch (productId) {
+                case 1:
+                    productTitle.textContent = "Đồng Hồ";
+                    productVideo.src = "(vid) đồng hồ";
+                    break;
+                case 2:
+                    productTitle.textContent = "Thắt Lưng";
+                    productVideo.src = "(vid) thắt lưng";
+                    break;
+                case 3:
+                    productTitle.textContent = "Dây Chuyền";
+                    productVideo.src = "(vid) dây chuyền";
+                    break;
+                case 4:
+                    productTitle.textContent = "Nhẫn";
+                    productVideo.src = "(vid) nhẫn";
+                    break;
+                case 5:
+                    productTitle.textContent = "Kính";
+                    productVideo.src = "(vid) kính";
+                    break;
+                case 6:
+                    productTitle.textContent = "Túi";
+                    productVideo.src = "(vid) túi";
+                    break;
+                    
+            }
+            overlay.style.display = 'flex';
+        }
+
+    function hideProductDetail() {
+        const overlay = document.getElementById('product-detail');
+        overlay.style.display = 'none';
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop quần áo AN PHÚC</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="shop quần áo.css">
+
+</head>
+<body>
+    <header> 
+        <div class = "logo">
+            <img id="ava" src="ava.jpg" alt="Avatar">
+            <img id="poster" src="poster.jpg" alt="Poster Image">
+        </div>
+        
+        <div id="menu-bar" class="fas fa-bars"></div>
+                    
+        <nav class="navbar">
+            <a href="#home">Trang chủ</a>
+            <a href="#sanpham">Sản phẩm</a>
+            <a id="đăng_nhập">Đăng Nhập</a>
+            <a id="đăng_ký">Đăng ký</a>
+            <a href="#gallery">Giỏ hàng</a>
+            <a href="#footer">Liên hệ</a>
+            <a id="search-btn">Tìm Kiếm</a>
+        </nav>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <div class="đăng_nhập">
+
+        <i class="fas fa-times" id="form-close-1"></i>
+
+        <form action="">
+            <h3>đăng nhập</h3>
+            <input type="text" class="box1" placeholder="Tên đăng nhập">
+            <input type="password" class="box1" placeholder="Mật khẩu">
+            <input type="submit" value="ĐĂNG NHẬP" class="btn">
+            <p>quên mật khẩu? <a href="#">Nhấn vào đây</a></p>
+            <p>Chưa có tài khoản? <a id="đăng_ký">Đăng kí ngay</a></p>
+        </form>
+
+    </div>
+
+    <div class="đăng_ký">
+
+        <i class="fas fa-times" id="form-close-2"></i>
+
+        <form action="">
+            <h3>đăng ký</h3>
+            <p class="box2">
+                Họ và Tên: 
+                <input type = "text" name = "Họ tên">
+            </p>
+            <p class="box2">
+                Giới tính: 
+                <input type = "radio" id = "Nam" name = "Giới tính" value = "Nam">
+                <label for = "Nam" > Nam </label>
+                <input type = "radio" id = "Nu" name = "Giới tính" value = "Nu">
+                <label for = "Nu" > Nữ </label><br>
+            </p>
+            <p class="box2">
+                Email:
+                <input type="email" id="email" name="email" required>
+            </p>           
+            <p class="box2">
+                Ngày Sinh:
+                <input type="date" id="dob" name="dob" required>
+            </p>
+            <p class="box2">
+                Địa chỉ: 
+                <input type = "text" name = "Địa chỉ">
+            </p>
+            <p class="box2">
+                Tên đăng nhập: 
+                <input type = "text" name = "Tên đăng nhập">
+            </p>
+            <p class="box2">
+                Mật Khẩu:
+                <input type="password" id="password" name="password" required>
+            </p>
+            
+            <input type="submit" value="ĐĂNG KÝ" class="btn">
+        </form>
+
+    </div>
+
+    <div class="sanpham" id="sanpham">
+        <h1 class="heading">
+            <span>S</span>
+            <span>A</span>
+            <span>N</span>
+            <span>P</span>
+            <span>H</span>
+            <span>A</span>
+            <span>M</span>
+        </h1>
+
+        <section class="product-list">
+            <article class="product" id="product1">
+                <a href="polo nam.html">
+                    <img src="polo nam.jpg" alt="Áo Polo">
+                    <h3> Áo Polo </h3>
+                    <h4>Giá: 120.000 VNĐ</h4>
+                </a>
+            </article>
+            
+            <article class="product" id="product2">
+                <a href="quần bò ống suông.html">
+                    <img src="quần bò ống suông.jpg" alt="Quần bò ống suông">
+                    <h3> Quần Bò Ống Suông </h3>
+                    <h4>Giá: 140.000 VNĐ</h4>
+                </a>
+            </article>
+            <article class="product" id="product3">
+                <a href="chân váy kaki.html">
+                    <img src="chân váy kaki.jpg" alt="Chân váy kaki">
+                    <h3> Chân Váy Kaki</h3>
+                    <h4>Giá: 160.000 VNĐ</h4>
+                </a>
+            </article>
+            <article class="product" id="product4">
+                <a href="jogger.html">
+                    <img src="jogger.jpg" alt="Jogger">
+                    <h3> Jogger </h3>
+                    <h4>Giá: 180.000 VNĐ</h4>
+                </a>
+            </article>
+            <article class="product" id="product5">
+                <a href="quần tây ống rộng.html">
+                    <img src="quần tây ống rộng.jpg" alt="Quần tây ống rộng">
+                    <h3> Quần Tây Ống Rộng </h3>
+                    <h4>Giá: 200.000 VNĐ</h4>
+                </a>
+            </article>
+            <article class="product" id="product6">
+                <a href="short jean.html">
+                    <img src="short jean.jpg" alt="Short jean">
+                    <h3> Short Jean </h3>
+                    <h4>Giá: 150.000 VNĐ</h4>
+                </a>
+            </article>
+            <article class="product" id="product7">
+                <a href="áo phông.html">
+                    <img src="áo phông.jpg" alt="Áo phông">
+                    <h3> Áo Phông </h3>
+                    <h4>Giá: 180.000 VNĐ</h4>
+                </a>
+            </article>
+            <article class="product" id="product8">
+                <a href="chân váy jean.html">
+                    <img src="chân váy jean.jpg" alt="Chân váy jean">
+                    <h3> Chân Váy Jean </h3>
+                    <h4>Giá: 220.000 VNĐ</h4>
+                </a>
+            </article>
+            <article class="product" id="product9">
+                <a href="váy.html">
+                    <img src="váy.jpg" alt="Váy">
+                    <h3> Váy </h3>
+                    <h4>Giá: 230.000 VNĐ </h4>
+                </a>
+            </article>
+        </section>
+    </div>
+
+    <section class="dichvu" id="dichvu">
+
+        <h1 class="heading">
+            <span>D</span>
+            <span>I</span>
+            <span>C</span>
+            <span>H</span>
+            <span>V</span>
+            <span>U</span>
+        </h1>
+
+        <div class="box-container">
+
+            <a class="box" href = "thuê đồ.html">
+                <i class="fas fa-tshirt"></i>
+                <h3>Thuê Đồ</h3>
+                <p>Tại đây, chúng tôi cung cấp áo dài, cổ phục và nhiều trang phục truyền thống khác để bạn tỏa sáng trong mọi dịp. </p>
+            </a>
+            <a class="box" href = "phụ kiện.html">
+                <i class="fas fa-shopping-bag"></i>
+                <h3>Phụ Kiện</h3>
+                <p>Phụ kiện là một phần quan trọng để hoàn thiện phong cách cá nhân và làm cho trang phục của bạn trở nên đặc biệt hơn. </p>
+            </a>
+            <a class="box" href = "chụp ảnh.html">
+                <i class="fas fa-camera"></i>
+                <h3>Chụp Ảnh</h3>
+                <p>Với các nhiếp ảnh gia có kỹ thuật và trang thiết bị hiện đại, bạn có thể tạo ra những bức ảnh đẹp, thể hiện cá tính và cảm xúc.</p>
+            </a>
+        </div>
+
+    </section>
+
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Giới Thiệu</h3>
+                <p>Chào mừng bạn đến với Shop Thời Trang An Phúc! Chúng tôi tự hào là địa điểm tuyệt vời để bạn tìm kiếm những bộ quần áo thời trang đa dạng từ những thương hiệu nổi tiếng đến phong cách độc đáo.</p>
+            </div>
+            <div class="box">
+                <h3>Liên hệ</h3>
+                <a href="https://www.facebook.com/profile.php?id=100092732870843">Facebook: Thời trang nam, nữ An Phúc</a>
+                <a> SDT: 0853 920 658 / 0913 019 568</a>
+                <a href="https://www.google.com/maps/search/121+Ngh%C4%A9a+D%C5%A9ng,+Ph%C3%BAc+X%C3%A1,+Ba+%C4%90%C3%ACnh,+H%C3%A0+N%E1%BB%99i/@21.0472046,105.8440941,17z/data=!3m1!4b1?hl=vi-VN&entry=ttu"> Địa chỉ: 121 Nghĩa Dũng, Phúc Xá, Ba Đình, Hanoi, Vietnam </a>
+            </div>
+
+        </div>
+
+        <h1 class="credit"> Được tạo bởi <span> Phong Dinh Ta </span> | Tất cả đã sẵn sàng phục vụ quý khách </h1>
+
+    </section>
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="shop quần áo.js"></script>
+
+</body>
+</html>
